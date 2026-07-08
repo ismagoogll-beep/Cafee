@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body style="background-color:black;color:white">
+  <h2 style="text-align:center;border:none;font-weight:bold"> Крафт Бургер 
+  </h2>
+  
+  <h3 style="border:none;font-weight:bold;text-align:center;">Сочные бургеры из натурального мяса с доставкой за 30 минут!
+  </h3>
+  
+  <hr style="border:none;background-color:red;height:2px;border-radius:10px">
+  
+  <h4 style="border:none;font-weight:bold; text-align:center;color:yellow">Меню:
+  </h4>
+  <hr style="border:none;border-radius:10px;background-color:red;height:2px">
+  <ol>
+    <li style="font-weight:bold;color:red " >Габургер: 180</li>
+    <li style="font-weight:bold;color:red " >Кола: 90</li>
+    <li style="font-weight:bold;color:red;">Картошка Фри: 150</li>
+    <li style="font-weight:bold;color:red;">Пицца: 260</li>
+    
+  </ol>
+  <hr style="background-color:red;border:none;border-radius:10px;height:2px">
+  <div style="display : flex;flex-direction:row;flex-wrap: wrap;gap:10px;justify-content:center;margin:20px;">
+  <button style="background-color:red;color:white;border:none;border-radius:10px;height:80px;width:90px" onclick="adGamburger()">Гамбургер (180 р.)
+  </button>
+  <button style="background-color:red;color:white;border:none;border-radius:10px;height:80px;width:90px"onclick="adCola()">Кола(90 р.)
+  </button>
+  
+  <button style="background-color:red;color:white;border-radius:10px;border:none;height:80px;width:90px;" onclick="adPotatosFree()">
+    Картошка Фри(150 р.)
+  </button>
+  <button style="background-color:red;color:white;height:80px;width:90px;border:none;border-radius:10px" onclick="adPizza()">Пицца(260 р.)
+  </button>
+  </div>
+  
+  
+  
+  <p style="font-weight:bold" id="final-result">
+    
+  </p>
+  
+  <script>
+    let totalPrise = 0
+    function adGamburger() {
+      totalPrise = totalPrise + 180
+      document.getElementById("final-result").innerText = "Вот ваш габургер и того с вас " + totalPrise + " рублей.Приятного аппетита!";
+    }
+    function adCola() {
+      totalPrise = totalPrise + 90
+      document.getElementById("final-result").innerText = "Вот ваша кола и того с вас " + totalPrise + " рублей. Приятного аппетита!";
+    }
+    function adPotatosFree() {
+      totalPrise = totalPrise + 150
+      document.getElementById("final-result").innerText = "Вот ваша картошка фри и того с вас" + totalPrise + " рублей. Приятного аппетита ";
+    }
+    function adPizza() {
+      totalPrise = totalPrise + 260 
+      document.getElementById("final-result").innerText = "Вот ваша пицца и того с вас " + totalPrise + " рублей.Приятного аппетита";
+    }
+    
+    
+  </script>
+  
+  
+  </body>
+  
+  
+  
+</html>
